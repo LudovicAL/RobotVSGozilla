@@ -9,22 +9,31 @@ public class Machine : MonoBehaviour {
 	public int objectiveRate;
 	public int perHowManySeconds;
 	private List<float> tapTimes;
-	private Text caption;
 	public float tapsPerXSecond { get; private set; }
 	public float power { get; private set; }
+	public Image image;
+	public Color defaultColor;
 
 	void Start() {
 		tapTimes = new List<float>();
 		if (objectiveRate == 0) {
 			objectiveRate = 1;
 		}
-		caption = this.GetComponentInChildren<Text> ();
+		image = transform.FindChild ("Image").gameObject.GetComponent<Image>();
+		tapsPerXSecond = 0.0f;
+		power = 0.0f;
 	}
 
 	void Update () {
 		if (Input.GetButtonDown(buttonName)) {
 			tapTimes.Add (Time.time);
 		}
+		ComputeTapRate ();
+		defaultColor.a = Mathf.Clamp (power, 0, 1); 
+		image.color = defaultColor;
+	}
+
+	private void ComputeTapRate() {
 		if (tapTimes.Count > 0) {
 			if (tapTimes[0] < (Time.time - perHowManySeconds)) {
 				tapTimes.RemoveAt(0);
@@ -32,6 +41,5 @@ public class Machine : MonoBehaviour {
 		}
 		tapsPerXSecond = tapTimes.Count;
 		power = (tapsPerXSecond / (float)objectiveRate);
-		caption.text = power.ToString("P0");
 	}
 }
