@@ -8,7 +8,7 @@ public class HeatlhBar : MonoBehaviour {
     private List<Machine> machineList;
     public float globalPower { get; private set; }
     public int activeMachines { get; private set; }
-    private Slider slider;
+    public Slider slider;
 	public float effectiveness { get; private set; }
 
     void Start() {
