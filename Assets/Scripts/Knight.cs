@@ -7,22 +7,25 @@ public class Knight : MonoBehaviour {
 	public int hitPoints;
 	private float damages;
 	private Animator animator;
+	private HeatlhBar healthBar;
 	private float lastHitTime;
 	private float timeBetweenHits;
-	private bool attacking;
 
 	// Use this for initialization
 	void Start () {
 		animator = transform.FindChild ("CharacterRig").gameObject.GetComponent<Animator> ();
+		healthBar = GameObject.Find ("Slider").GetComponent<HeatlhBar>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		timeBetweenHits = Mathf.Clamp(10.0f - (5000.0f * healthBar.effectiveness), 1.1f, Mathf.Infinity);
+		Debug.Log ((5000.0f * healthBar.effectiveness).ToString() + " / " + timeBetweenHits.ToString ());
 		if (hitPoints <= 0) {
 			Die ();
-		} else if (attacking && (Time.time - lastHitTime) > timeBetweenHits) {
+		} else if ((Time.time - lastHitTime) > timeBetweenHits) {
 			Attack ();
-		} else if (power < 0.5) {
+		} else if (healthBar.effectiveness > 0.5) {
 			Defend ();
 		} else {
 			GoIdle ();
@@ -35,17 +38,24 @@ public class Knight : MonoBehaviour {
 		animator.SetBool ("Hurt", hurt);
 		animator.SetBool ("Dead", dead);
 	}
-
+		
 	public void GoIdle() {
-		SetTriggers (false, false, false, false);
+		if (animator.GetBool("Dead") != true) {
+			SetTriggers (false, false, false, false);
+		}
 	}
 
 	private void Defend() {
-		SetTriggers (true, false, false, false);
+		if (animator.GetBool("Dead") != true) {
+			SetTriggers (true, false, false, false);
+		}
 	}
 
 	private void Attack() {
-		SetTriggers (false, true, false, false);
+		if (animator.GetBool("Dead") != true) {
+			lastHitTime = Time.time;
+			SetTriggers (false, true, false, false);
+		}
 	}
 
 	public void Hurt() {
