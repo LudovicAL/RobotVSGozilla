@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Robot : MonoBehaviour {
+public class Monster : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
