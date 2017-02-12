@@ -10,8 +10,12 @@ public class HeatlhBar : MonoBehaviour {
     public int activeMachines { get; private set; }
     public Slider slider;
 	public float effectiveness { get; private set; }
+	private GameObject knightArrow;
+	private GameObject monsterArrow;
 
     void Start() {
+		knightArrow = GameObject.Find("ImageKnightArrow");
+		monsterArrow = GameObject.Find("ImageMonsterArrow");
         GameObject[] bob = GameObject.FindGameObjectsWithTag("Machine");
         machineList = new List<Machine>();
         foreach (GameObject go in bob) {
@@ -24,6 +28,17 @@ public class HeatlhBar : MonoBehaviour {
 	void Update () {
 		GetGlobalPower ();
 		ComputeEffectiveness ();
+		SetArrows ();
+	}
+
+	private void SetArrows() {
+		if (effectiveness > 0) {
+			knightArrow.SetActive (true);
+			monsterArrow.SetActive (false);
+		} else {
+			knightArrow.SetActive (false);
+			monsterArrow.SetActive (true);
+		}
 	}
 
 	void TimedUpdate() {
