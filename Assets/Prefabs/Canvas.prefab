@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 223223611399227854}
   - component: {fileID: 114538501722662236}
   - component: {fileID: 114832130961222604}
+  - component: {fileID: 114087539847764422}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -298,7 +299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1290180996189822
 GameObject:
   m_ObjectHideFlags: 1
@@ -1067,6 +1068,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114087539847764422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235008251176676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdf9010cf94a71749aa2a72b3ba298ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114100404408117552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1809,7 +1821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.647}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1932,7 +1944,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06fa55aff38a4c64b87c4436f5f60156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 0}
 --- !u!222 &222099718456376366
 CanvasRenderer:
   m_ObjectHideFlags: 1
