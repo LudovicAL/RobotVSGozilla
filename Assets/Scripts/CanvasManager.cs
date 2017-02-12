@@ -31,6 +31,10 @@ public class CanvasManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetButtonDown("Cancel")) {
+			Debug.Log ("Bye");
+			Application.Quit();
+		}
 		if (!panelEnd.activeSelf) {
 			if (healthBar.slider.value <= 0) {	//Defeat
 				panelEnd.SetActive(true);

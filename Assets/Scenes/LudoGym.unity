@@ -491,7 +491,7 @@ Prefab:
     - target: {fileID: 224047995654873014, guid: 822ae34fcd9002447be77687fa1b1417,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -23.546555
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224047995654873014, guid: 822ae34fcd9002447be77687fa1b1417,
         type: 2}
@@ -501,7 +501,7 @@ Prefab:
     - target: {fileID: 224047995654873014, guid: 822ae34fcd9002447be77687fa1b1417,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 47.09311
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224372339345221942, guid: 822ae34fcd9002447be77687fa1b1417,
         type: 2}
@@ -521,7 +521,7 @@ Prefab:
     - target: {fileID: 224372339345221942, guid: 822ae34fcd9002447be77687fa1b1417,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -23.546555
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224372339345221942, guid: 822ae34fcd9002447be77687fa1b1417,
         type: 2}
@@ -531,7 +531,7 @@ Prefab:
     - target: {fileID: 224372339345221942, guid: 822ae34fcd9002447be77687fa1b1417,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 47.09311
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224891095805970180, guid: 822ae34fcd9002447be77687fa1b1417,
         type: 2}
@@ -551,7 +551,7 @@ Prefab:
     - target: {fileID: 224891095805970180, guid: 822ae34fcd9002447be77687fa1b1417,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -23.546555
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224891095805970180, guid: 822ae34fcd9002447be77687fa1b1417,
         type: 2}
@@ -561,7 +561,7 @@ Prefab:
     - target: {fileID: 224891095805970180, guid: 822ae34fcd9002447be77687fa1b1417,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 47.09311
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 822ae34fcd9002447be77687fa1b1417, type: 2}
