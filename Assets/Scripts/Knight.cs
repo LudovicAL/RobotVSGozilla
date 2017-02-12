@@ -32,39 +32,46 @@ public class Knight : MonoBehaviour {
 		}
 	}
 
-	private void SetTriggers(bool defensive, bool attacking, bool hurt, bool dead) {
-		animator.SetBool ("Defensive", defensive);
-		animator.SetBool ("Attacking", attacking);
-		animator.SetBool ("Hurt", hurt);
-		animator.SetBool ("Dead", dead);
-	}
-		
 	public void GoIdle() {
-		if (animator.GetBool("Dead") != true) {
-			SetTriggers (false, false, false, false);
+		if (!animator.GetBool("Dead") && animator.GetBool("Defensive")) {
+			animator.SetBool ("Defensive", false);
 		}
 	}
 
 	private void Defend() {
-		if (animator.GetBool("Dead") != true) {
-			SetTriggers (true, false, false, false);
+		if (!animator.GetBool("Dead") && !animator.GetBool("Defensive")) {
+			animator.SetBool ("Defensive", true);
 		}
 	}
 
 	private void Attack() {
-		if (animator.GetBool("Dead") != true) {
+		if (!animator.GetBool("Dead") && !animator.GetBool("Attacking")) {
 			lastHitTime = Time.time;
-			SetTriggers (false, true, false, false);
+			animator.SetBool ("Attacking", true);
+			Invoke ("StopAttacking", 1.0f);
 		}
 	}
 
 	public void Hurt() {
-		if (animator.GetBool("Dead") != true) {
-			SetTriggers (false, false, true, false);
+		if (!animator.GetBool("Dead") && !animator.GetBool("Hurt")) {
+			animator.SetBool ("Hurt", true);
+			Invoke ("StopHurting", 1.0f);
 		}
 	}
 
 	private void Die() {
-		SetTriggers (false, false, false, true);
+		if (!animator.GetBool("Dead")) {
+			animator.SetBool ("Hurt", false);
+			animator.SetBool ("Attacking", false);
+			animator.SetBool ("Dead", true);
+		}
+	}
+
+	private void StopAttacking() {
+		animator.SetBool ("Attacking", false);
+	}
+
+	private void StopHurting() {
+		animator.SetBool ("Hurt", false);
 	}
 }

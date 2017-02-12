@@ -22,6 +22,7 @@ public class Machine : MonoBehaviour {
 		image = transform.FindChild ("Image").gameObject.GetComponent<Image>();
 		tapsPerXSecond = 0.0f;
 		power = 0.0f;
+		defaultColor = image.color;
 	}
 
 	void Update () {
