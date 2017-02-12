@@ -5,7 +5,7 @@ using UnityEngine;
 public class Monster : MonoBehaviour {
 
 	public float timeBetweenHits;
-	private Animator animator;
+	public Animator animator { get; private set; }
 	private HeatlhBar healthBar;
 	private float lastHitTime;
 	private Knight knight;
@@ -31,7 +31,7 @@ public class Monster : MonoBehaviour {
 	}
 
 	private void Attack() {
-		if (!animator.GetBool("Dead") && !animator.GetBool("Attacking")) {
+		if (!animator.GetBool("Dead") && !animator.GetBool("Attacking") && !knight.animator.GetBool("Dead")) {
 			lastHitTime = Time.time;
 			animator.SetBool ("Attacking", true);
 			Invoke ("StopAttacking", 1.0f);

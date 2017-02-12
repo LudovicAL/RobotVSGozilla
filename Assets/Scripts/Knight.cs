@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Knight : MonoBehaviour {
 
-	private Animator animator;
+	public Animator animator { get; private set; }
 	private HeatlhBar healthBar;
 	private float lastHitTime;
 	private float timeBetweenHits;
@@ -17,8 +17,8 @@ public class Knight : MonoBehaviour {
 		animator = transform.FindChild ("CharacterRig").gameObject.GetComponent<Animator> ();
 		healthBar = GameObject.Find ("Slider").GetComponent<HeatlhBar>();
 		monster = GameObject.Find("Monster").GetComponent<Monster>();
-		particle3 = GameObject.Find("Particle3").GetComponent<ParticleSystem>();
-		particle4 = GameObject.Find("Particle4").GetComponent<ParticleSystem>();
+		particle3 = GameObject.Find("ParticleTree").GetComponent<ParticleSystem>();
+		particle4 = GameObject.Find("ParticleFour").GetComponent<ParticleSystem>();
 	}
 	
 	// Update is called once per frame
@@ -48,7 +48,7 @@ public class Knight : MonoBehaviour {
 	}
 
 	private void Attack() {
-		if (!animator.GetBool("Dead") && !animator.GetBool("Attacking")) {
+		if (!animator.GetBool("Dead") && !animator.GetBool("Attacking") && !monster.animator.GetBool("Dead")) {
 			lastHitTime = Time.time;
 			animator.SetBool ("Attacking", true);
 			Invoke ("HurtOther", 0.3f);
