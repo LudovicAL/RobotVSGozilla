@@ -1,0 +1,246 @@
+fileFormatVersion: 2
+guid: b259acb822c3747b6b31dce9ebd243e3
+timeCreated: 1486855637
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MoonKnightHead
+    21300002: MoonKnightArmRight
+    21300004: MoonKnightChest
+    21300006: MoonKnightArmLeft
+    21300008: MoonKnightShield
+    21300010: MoonKnightPelvis
+    21300012: MoonKnightLegLeft
+    21300014: MoonKnightSword
+    21300016: MoonKnightFootRight
+    21300018: MoonKnightFootLeft
+    21300020: MoonKnightLegRight
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -2
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 1024
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 1024
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 1024
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MoonKnightHead
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 425
+        width: 198
+        height: 174
+      alignment: 9
+      pivot: {x: 0.5066684, y: 0.11382162}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MoonKnightArmRight
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 243
+        width: 127
+        height: 168
+      alignment: 9
+      pivot: {x: 0.9584145, y: 0.7327895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MoonKnightChest
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 258
+        width: 159
+        height: 122
+      alignment: 9
+      pivot: {x: 0.607952, y: 0.15368277}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MoonKnightArmLeft
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 252
+        width: 135
+        height: 165
+      alignment: 9
+      pivot: {x: 0.05868146, y: 0.6639149}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MoonKnightShield
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 52
+        width: 119
+        height: 126
+      alignment: 9
+      pivot: {x: 0.19971427, y: 0.84281725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MoonKnightPelvis
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 177
+        width: 99
+        height: 73
+      alignment: 9
+      pivot: {x: 0.5400098, y: 0.1201776}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MoonKnightLegLeft
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 153
+        width: 57
+        height: 26
+      alignment: 9
+      pivot: {x: 0.32429263, y: 0.74608904}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MoonKnightSword
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 50
+        width: 103
+        height: 180
+      alignment: 9
+      pivot: {x: 0.11536889, y: 0.13936844}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MoonKnightFootRight
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 111
+        width: 36
+        height: 35
+      alignment: 9
+      pivot: {x: 0.46332297, y: 0.8868282}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MoonKnightFootLeft
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 111
+        width: 36
+        height: 35
+      alignment: 9
+      pivot: {x: 0.53667706, y: 0.8868282}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MoonKnightLegRight
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 153
+        width: 56
+        height: 25
+      alignment: 9
+      pivot: {x: 0.66991645, y: 0.7887457}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
